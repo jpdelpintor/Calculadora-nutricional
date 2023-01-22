@@ -21,8 +21,20 @@ header img{
     transform: scale(0.8);
 }
 menu{
-    display: none;
+    position: absolute;
+    
 }
+menu ul{
+    display: flex;
+    flex-direction: column;
+
+}
+
+menu ul > li{
+    margin-top: 10px;
+}
+
+
 
 span#menuhamburguer{
     color: black;
