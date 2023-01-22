@@ -1,0 +1,25 @@
+@charset "UTF-8";
+:root{
+
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10px;
+
+}
+
+header ul{
+    list-style: none;
+}
+
+ul#imenu li{
+    display: inline-block;
+    
+}
