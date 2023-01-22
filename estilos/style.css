@@ -1,11 +1,13 @@
 @charset "UTF-8";
 :root{
-
+    --cor1:#AFC276;
+    --cor2:#FAF4F1;
 }
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    background-color: var(--cor2);
 }
 header{
     display: flex;
@@ -14,12 +16,25 @@ header{
     padding: 30px 10px;
 
 }
+menu{
+    display: none;
+}
 
-header ul{
+ul#imenu{
     list-style: none;
 }
 
 ul#imenu li{
     display: inline-block;
+    margin-right: 20px;
+}
+
+ul#imenu span{
+    color: black;
+
+}
+
+a#menuhamburguer{
+    color: black;
     
 }
