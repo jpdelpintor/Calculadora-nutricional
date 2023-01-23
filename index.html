@@ -15,13 +15,28 @@
     <header>
         <a href="#"><img src="imagens/logo-retangular(105x75).png" alt="Logo"></a>
         
-        <span id="menuhamburguer" class="material-icons">menu</span>
+        <span id="menuhamburguer" class="material-icons" onclick="activateMenu()">menu</span>
     </header>
-    <menu>
-        <ul id="imenu">
-            <li><a href="#"><span class="material-icons">search</span></a></li>
-            <li><a href="#"><span class="material-icons">person</span></a></li>
-            <li><a href="#"><span class="material-icons">shopping_cart</span></a></li>
+    <menu id="imenu">
+        <ul id="ilist">
+            <li>
+                <a href="https://www.google.com.br/" target="_blank">
+                    <span class="material-icons listicons">search</span>
+                    <span class="listtext">Pesquisar</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="material-icons listicons">person</span>
+                    <span class="listtext">Login/Criar conta</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="material-icons listicons">shopping_cart</span>
+                    <span class="listtext">Comprar</span>
+                </a>
+            </li>
             
         </ul>
         
@@ -40,6 +55,16 @@
     <footer>
 
     </footer>
+
+    <script>
+        function activateMenu (){
+            if (imenu.style.display == 'block') {
+                imenu.style.display = 'none'
+            } else{
+                imenu.style.display = 'block'
+            }
+        }
+    </script>
     
 </body>
 </html>

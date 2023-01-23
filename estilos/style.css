@@ -2,6 +2,7 @@
 :root{
     --cor1:#AFC276;
     --cor2:#FAF4F1;
+    --cor1transp:#afc2769a;
 }
 *{
     margin: 0px;
@@ -20,24 +21,49 @@ header{
 header img{
     transform: scale(0.8);
 }
-menu{
+menu#imenu{
+    display: none;
     position: absolute;
-    
+    top: 0px;
+    left: 0px;
+    background-color: var(--cor1transp);
+    border-radius: 0px 5px 5px 0px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.353);
 }
-menu ul{
+menu#imenu ul{
     display: flex;
     flex-direction: column;
-
+    padding: 0px 20px;
+    list-style: none;
+    background-color: transparent;
 }
 
-menu ul > li{
-    margin-top: 10px;
+ul#ilist > li{
+    
+    padding: 30px 0px;
+    background-color: transparent;
+    
 }
 
+ul#ilist a{
+    text-decoration: none;
+    background-color: transparent;
+}
 
+span.listicons{
+    color: black;
+    margin-right: 20px;
+    background-color: transparent;
+}
+
+span.listtext{
+    color: black;
+    background-color: transparent;
+}
 
 span#menuhamburguer{
     color: black;
+    cursor: pointer;
     
 }
 
