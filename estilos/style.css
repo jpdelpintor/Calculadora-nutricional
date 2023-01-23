@@ -60,6 +60,12 @@ span.listtext{
     color: black;
     background-color: transparent;
 }
+span#closeicon{
+    
+    padding: 5px;
+    background-color: transparent;
+
+}
 
 span#menuhamburguer{
     color: black;
