@@ -17,8 +17,8 @@
         
         <span id="menuhamburguer" class="material-icons" onclick="activateMenu()">menu</span>
     </header>
-    <menu id="imenu">
-        <span id="closeicon" class="material-icons">close</span>
+    <menu id="imenu" class="hide">
+        <span id="closeicon" class="material-icons" onclick="activateMenu()">close</span>
         <ul id="ilist">
             <li>
                 <a href="https://www.google.com.br/" target="_blank">
@@ -59,10 +59,13 @@
 
     <script>
         function activateMenu (){
-            if (imenu.style.display == 'block') {
-                imenu.style.display = 'none'
-            } else{
-                imenu.style.display = 'block'
+            if (imenu.classList.contains('show') == true) {
+                imenu.removeAttribute('class', 'show');
+                imenu.setAttribute('class','hide');
+                
+            } else {
+                imenu.setAttribute('class','show');
+                
             }
         }
     </script>
