@@ -35,19 +35,20 @@ menu#imenu{
     background-color: var(--cor1transp);
     border-radius: 0px 5px 5px 0px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.353);
-    transition-property: height;
-    transition-duration: 10s;
-    transition-timing-function: linear;
+    transition-property: left, height, width;
+    transition-duration: 10s,.5s,.5s;
+    transition-timing-function: ease-in-out,cubic-bezier(.15,.98,.9,.03),cubic-bezier(.15,.98,.9,.03);
     
 }
 .hide{
+    left: -42vw;
     height: 40vh;
-    
+    width: 40vw;
     
 }
 
 .show{
-    
+    left: 0px;
     height: 100vh;
     width: 90vw;
     
