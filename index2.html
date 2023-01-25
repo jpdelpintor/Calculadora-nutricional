@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
+        #container{
+            display: flex;
+            position: relative;
+            border: 2px solid black;
+            height: 100vh;
+            width: 100vw;
+            flex-direction: row;
+            align-items: flex-start;
+            
+        }
+        
+        #container:hover .element{
+            transform: translate(400px, 400px);
+            background-color: red;
+            
+            
+        }
+        #element{
+            
+            background-color: aquamarine;
+            height: 30px;
+            width: 30px;
+            transition-property:transform, background-color ;
+            transition-duration: 10s, 10s;
+            transition-timing-function: cubic-bezier(0,1.58,1,-0.69), cubic-bezier(0,1.58,1,-0.69);
+            
+        }
+        #element2{
+            
+            background-color: blue;
+            height: 30px;
+            width: 30px;
+            transition: transform 10s cubic-bezier(0,1.58,1,-0.69);
+        }
+        #element3{
+            
+            background-color: blueviolet;
+            height: 30px;
+            width: 30px;
+            transition: background-color 5s ease-in;
+        }
+        
+        #element4{
+            background-color: greenyellow;
+            height: 30px;
+            width: 30px;
+            
+        }
+        #element4:hover{
+            height: 100vh;
+            transition: height 10s linear;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="element" class="element">
+
+        </div>
+        <div id="element2" class="element">
+
+        </div>
+        <div id="element3" class="element">
+
+        </div>
+        <div id="element4">
+
+        </div>
+    </div>
+    
+</body>
+</html>
