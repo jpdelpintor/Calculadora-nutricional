@@ -100,9 +100,6 @@ span#menuhamburguer{
     cursor: pointer;
     
 }
-.button{
-
-}
 
 .button::after{
     content: "";
