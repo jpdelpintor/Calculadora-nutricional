@@ -18,29 +18,29 @@ header{
     padding: 30px 30px;
 
 }
+header > a{
+    background-color: transparent;
+}
 header img{
     transform: scale(0.8);
 }
 menu#imenu{
-    
+    display: block;
     position: absolute;
     top: 0px;
-    left: 0px;
     background-color: var(--cor1);
     border-radius: 0px 5px 5px 0px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.353);
-    
+    transition: left 2s ease-in;
     
 }
-menu.hide{
-    display: none;
-    opacity: 0;
-    transition: opacity 3s ease;
+.hide{
+    left: -400px;
 }
 
-menu.show{
-    display: block;
-    opacity: 1;
+.show{
+    left:0px
+    
 }
 
 menu#imenu ul{
