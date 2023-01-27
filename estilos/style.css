@@ -41,16 +41,16 @@ menu#imenu{
     
 }
 .hide{
-    left: -42vw;
-    height: 40vh;
-    width: 40vw;
+    left: -300px;
+    height: 300px;
+    width: 300px;
     
 }
 
 .show{
     left: 0px;
     height: 100vh;
-    width: 90vw;
+    width: 100vw;
     
 }
 
@@ -64,9 +64,16 @@ menu#imenu ul{
 
 ul#ilist > li{
     
-    padding: 30px 0px;
+    margin: 15px 0px;
+    padding: 15px 0px;
+    border-radius: 10px;
     background-color: transparent;
+    transition: background-color .2s;
     
+}
+ul#ilist > li:active{
+    background-color: var(--cor2);
+    transition: background-color .2s;
 }
 
 ul#ilist a{
@@ -85,11 +92,38 @@ span.listtext{
     background-color: transparent;
 }
 span#closeicon{
+    position: relative;
     float: right;
     padding: 5px;
     background-color: transparent;
     cursor: pointer;
     color: black;
+
+}
+.button2::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    height: 24px;
+    width: 24px;
+    box-shadow: 0px 0px 20px 40px var(--cor2);
+    border-radius: 50%;
+    transition: all 0.5s;
+    transform: translate(-50%,-50%);
+}
+
+.button2:active::after{
+    box-shadow: 0px 0px 0px 0px var(--cor2);    
+    opacity: 1;
+    transition: 0s;
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 
 }
 
@@ -101,7 +135,7 @@ span#menuhamburguer{
     
 }
 
-.button::after{
+.button1::after{
     content: "";
     display: block;
     position: absolute;
@@ -118,7 +152,7 @@ span#menuhamburguer{
 
 }
 
-.button:active::after{
+.button1:active::after{
     box-shadow: 0px 0px 0px 0px 0px var(--cor1transp);
     opacity: 1;
     transition: 0s;
@@ -129,5 +163,7 @@ span#menuhamburguer{
     
 
 }
+
+
 
 
