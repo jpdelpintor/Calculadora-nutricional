@@ -169,6 +169,27 @@ span#menuhamburguer{
     
 
 }
+.section{
+    
+}
+#section1{
+
+    height: 80vh;
+}
+
+#subsection1{
+    text-align: center;
+    margin: auto;
+    height: 30%;
+}
+
+#section2{
+    background-color: var(--cor1);
+    height: 200px;
+}
+
+
+
 
 
 
