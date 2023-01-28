@@ -8,11 +8,11 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    background-color: whitesmoke;
+    
 }
 body, html{
     height: 100vh;
-
+    background-color: whitesmoke;
 }
 header{
     background-color: var(--cor2);
@@ -31,6 +31,7 @@ header img{
 menu#imenu{
     display: block;
     position: absolute;
+    padding: 0px 15px;
     top: 0px;
     background-color: var(--cor1transp);
     border-radius: 0px 5px 5px 0px;
@@ -176,9 +177,43 @@ span#menuhamburguer{
 }
 
 #subsection1{
+    display: flex;
+    color: white;
+    background-color: #3C393A;
+    height: 45%;
+    width: 450px;
+    margin: 30px auto 0px auto;
+    padding: 10px;
+    border-radius: 10px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   
+    
+
+}
+.conteudo{
+    width: 70%;
+    padding-right: 10px;
+
+}
+.conteudo > h2{
     text-align: center;
-    margin: auto;
-    height: 30%;
+}
+.conteudo > p{
+    text-align: justify;
+    margin-top: 20px;
+    line-height: 1.3em;
+}
+.imagem{
+    width: 30%;
+    height: 100%;
+    background-image: url('../imagens/animacaocardapio-250x375.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left bottom;
+    
+    
 }
 
 #section2{
