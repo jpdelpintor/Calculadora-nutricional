@@ -310,6 +310,7 @@ strong{
 #section2{
     background-color: var(--cor1);
     height: 30vh;
+    padding: 0px 20px;
 }
 #estiloForm{
     display: flex;
@@ -319,9 +320,15 @@ strong{
 #estiloForm > input{
     margin-left: 10px;
     background-color: var(--cor2);
-    border: none;
+    border: 0px;
+    border-radius: 10px;
+    padding: 0px 10px;
     
 }
+#estiloForm > .campo{
+    flex: 1 0 auto;
+}
+
 .campo{
     display: flex;
     background-color: white;
