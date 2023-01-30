@@ -311,7 +311,17 @@ strong{
     background-color: var(--cor1);
     height: 30vh;
 }
-
+#estiloForm{
+    display: flex;
+    flex-flow: row nowrap;
+    
+}
+#estiloForm > input{
+    margin-left: 10px;
+    background-color: var(--cor2);
+    border: none;
+    
+}
 .campo{
     display: flex;
     background-color: white;
