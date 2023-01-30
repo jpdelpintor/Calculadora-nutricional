@@ -313,8 +313,35 @@ strong{
 }
 
 .campo{
+    display: flex;
+    background-color: white;
+    width: 320px;
+    border: 2px solid var(--cor2);
+    border-radius: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     
 }
+.campo > label{
+    display: block;
+    height: 28px;
+    width: 24px;
+    position: relative;
+}
+.campo > label > span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    color: var(--cor1);
+    transform: translate(-50%, -50%) scale(0.8);
+}
+.campo > input{
+    border: 0px;
+    width: calc(100% - 31px);
+}
+
 
 
 
