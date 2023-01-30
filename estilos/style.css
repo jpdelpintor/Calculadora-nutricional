@@ -308,9 +308,24 @@ strong{
     
 }
 #section2{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: stretch;
+    justify-content: center;
     background-color: var(--cor1);
-    height: 30vh;
+    height: 22vh;
     padding: 0px 20px;
+
+}
+#section2 > p{
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-family: var(--font);
+    font-size: 13px;
+    text-transform: uppercase;
+    line-height: 18px;
+    letter-spacing: 0px;
+    color: black;
 }
 #estiloForm{
     display: flex;
@@ -323,8 +338,17 @@ strong{
     border: 0px;
     border-radius: 10px;
     padding: 0px 10px;
+    font-family: var(--font);
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cor1);
+    line-height: 13.3px;
+    letter-spacing: 0px;
+    cursor: pointer;
     
 }
+
 #estiloForm > .campo{
     flex: 1 0 auto;
 }
