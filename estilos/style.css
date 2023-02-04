@@ -395,13 +395,17 @@ strong{
 .cabecalho > button{
     display: flex;
     border: 0px;
+    width: 100%;
     padding: 20px;
     background-color: transparent;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     column-gap: 5px;
     text-transform: uppercase;
     font-weight: 900;
+}
+.cabecalho > button:focus + ul{
+    display: none;
 }
 .cabecalho span{
     transform: scale(.8);
