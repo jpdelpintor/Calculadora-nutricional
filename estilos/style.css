@@ -234,22 +234,26 @@ strong{
     
     
 }
+
 #section1 > a:hover{
     background-color: var(--cor1);
     color: white;
 }
+
 #section1 > a::after{
-    content: "";
-    display: block;
+    content: "Monte seu cardápio!";
+    display: flex;
     position: absolute;
     top: 0px;
     left: 0px;
     height: 100%;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 8px;
     opacity: 0;
     background-color: var(--cor1);
-    transition: all .5s;
+    align-items: center;
+    justify-content: center;
+    transition: all .7s;
 }
 #section1 > a:active::after{
     opacity: 1;
@@ -257,6 +261,7 @@ strong{
     position: absolute;
     top: 0px;
     left: 0px;
+    color: white;
 
 }
 
@@ -383,8 +388,45 @@ strong{
     width: calc(100% - 31px);
 }
 
+.cabecalho{
+    border-bottom: 1px solid black;
+      
+}
+.cabecalho > button{
+    display: flex;
+    border: 0px;
+    padding: 20px;
+    background-color: transparent;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.cabecalho span{
+    transform: scale(.8);
+    font-weight: bold;
+}
 
+.cabecalho ul{
+    list-style: none;
+}
+.cabecalho li{
+    padding: 20px;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+.cabecalho a{
+    text-decoration: none;
+    font-family: var(--font);
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    color: black;
 
+}
+
+ 
 
 
 
