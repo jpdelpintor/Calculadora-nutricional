@@ -87,12 +87,12 @@
         <section id="section3" class="section">
             <div class="cabecalho">
                 
-                <button class="botao">
+                <button class="botao" onclick="activateDropMenu ()">
                     <span class="material-icons">add</span>
                     Produtos
                 </button>
                 
-                <ul>
+                <ul id="iproducts" class="hidedropmenu">
                     <li><a href="#">Todos</a></li>
                     <li><a href="#">Nutrição</a></li>
                     <li><a href="#">Coleção</a></li>
@@ -102,11 +102,11 @@
             
             <div class="cabecalho">
                 
-                <button class="botao">
+                <button class="botao" onclick="activateDropMenu ()">
                     <span class="material-icons">add</span>
                     Institucional
                 </button>
-                <ul>
+                <ul id="iinstitutional" class="hidedropmenu">
                     <li><a href="#">Sobre</a></li>
                     <li><a href="#">Seja nosso parceiro</a></li>
                     <li><a href="#">Ouvidoria</a></li>
@@ -115,32 +115,32 @@
             
             <div class="cabecalho">
                 
-                <button class="botao">
+                <button class="botao" onclick="activateDropMenu ()">
                     <span class="material-icons">add</span>
                     Conteúdo
                 </button>
-                <ul>
+                <ul id="icontent" class="hidedropmenu">
                     <li><a href="#">Calculadora</a></li> 
                  </ul>
             </div>
             
             <div class="cabecalho">
-                <button class="botao">
+                <button class="botao" onclick="activateDropMenu ()">
                     <span class="material-icons">add</span>
                     Minha Conta
                 </button>
-                <ul>
+                <ul id="imyuser" class="hidedropmenu">
                     <li><a href="#">Meus dados</a></li>
                     <li><a href="#">Meus pedidos</a></li>
                 </ul>
             </div>
             
             <div class="cabecalho">
-                <button class="botao">
+                <button class="botao" onclick="activateDropMenu ()">
                     <span class="material-icons">add</span>
                     Suporte
                 </button>
-                <ul>
+                <ul id="isupport" class="hidedropmenu">
                     <li><a href="#">Troca e devoluções</a></li>
                     <li><a href="#">Política de privacidade</a></li>
                     <li><a href="#">Política de entrega</a></li>
@@ -166,6 +166,39 @@
             } else{
                 document.getElementById("imenu").classList = "show";
             }
+        }
+        function activateDropMenu (){
+            if(document.getElementById("iproducts").classList.contains('showdropmenu')){
+                document.getElementById("iproducts").classList = "hidedropmenu";
+            }
+            else if(document.getElementById("iproducts").classList.contains('hidedropmenu')){
+                document.getElementById("iproducts").classList = "showdropmenu";
+            }
+            else if(document.getElementById("iinstitutional").classList.contains('showdropmenu')){
+                document.getElementById("iinstitutional").classList = "hidedropmenu";
+            }
+            else if(document.getElementById("iinstitutional").classList.contains('hidedropmenu')){
+                document.getElementById("iinstitutional").classList = "showdropmenu";
+            }
+            else if(document.getElementById("icontent").classList.contains('showdropmenu')){
+                document.getElementById("icontent").classList = "hidedropmenu";
+            }
+            else if(document.getElementById("icontent").classList.contains('hidedropmenu')){
+                document.getElementById("icontent").classList = "showdropmenu";
+            }
+            else if(document.getElementById("iuser").classList.contains('showdropmenu')){
+                document.getElementById("iuser").classList = "hidedropmenu";
+            }
+            else if(document.getElementById("iuser").classList.contains('hidedropmenu')){
+                document.getElementById("iuser").classList = "showdropmenu";
+            }
+            else if(document.getElementById("isupport").classList.contains('showdropmenu')){
+                document.getElementById("isupport").classList = "hidedropmenu";
+            }
+            else {
+                document.getElementById("isupport").classList = "showdropmenu";
+            }
+            
         }
         
     </script>

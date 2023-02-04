@@ -404,8 +404,16 @@ strong{
     text-transform: uppercase;
     font-weight: 900;
 }
+/*Abaixo uma opção de código, usando CSS apenas, para, clicando no elemento button, produzir um efeito no elemento ul, no caso, fazê-lo sumir.
 .cabecalho > button:focus + ul{
     display: none;
+}
+*/
+.hidedropmenu{
+    display: none;
+}
+.showdropmenu{
+    display: block;
 }
 .cabecalho span{
     transform: scale(.8);
