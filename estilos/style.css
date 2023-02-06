@@ -235,11 +235,6 @@ strong{
     
 }
 
-#section1 > a:hover{
-    background-color: var(--cor1);
-    color: white;
-}
-
 #section1 > a::after{
     content: "Monte seu cardápio!";
     display: flex;

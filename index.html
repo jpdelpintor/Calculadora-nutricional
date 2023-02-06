@@ -87,7 +87,7 @@
         <section id="section3" class="section">
             <div class="cabecalho">
                 
-                <button class="botao" onclick="activateDropMenu ()">
+                <button class="botao" onclick="activateDropMenu(this)">
                     <span class="material-icons">add</span>
                     Produtos
                 </button>
@@ -153,7 +153,23 @@
         </section>
     </main>
     <footer>
+        <div id="cartao">
+            <span class="material-icons">credit_card</span>
+            <p>
+                Até 3x no cartão
+            </p>
+            <img src="imagens/cartoes.png" alt="cartoes aceitos">
+        </div>
+        <div id="comprasegura">
+            <span class="material-icons">enhanced_encryption</span>
+            <p>
+                Compra segura
+            </p>
+            <img src="imagens/comprasegura.png" alt="compra segura">
+        </div>
+        <div id="rodape">
 
+        </div>
     </footer>
     <script>
         function activateMenu (){
@@ -167,37 +183,9 @@
                 document.getElementById("imenu").classList = "show";
             }
         }
-        function activateDropMenu (){
-            if(document.getElementById("iproducts").classList.contains('showdropmenu')){
-                document.getElementById("iproducts").classList = "hidedropmenu";
-            }
-            else if(document.getElementById("iproducts").classList.contains('hidedropmenu')){
-                document.getElementById("iproducts").classList = "showdropmenu";
-            }
-            else if(document.getElementById("iinstitutional").classList.contains('showdropmenu')){
-                document.getElementById("iinstitutional").classList = "hidedropmenu";
-            }
-            else if(document.getElementById("iinstitutional").classList.contains('hidedropmenu')){
-                document.getElementById("iinstitutional").classList = "showdropmenu";
-            }
-            else if(document.getElementById("icontent").classList.contains('showdropmenu')){
-                document.getElementById("icontent").classList = "hidedropmenu";
-            }
-            else if(document.getElementById("icontent").classList.contains('hidedropmenu')){
-                document.getElementById("icontent").classList = "showdropmenu";
-            }
-            else if(document.getElementById("iuser").classList.contains('showdropmenu')){
-                document.getElementById("iuser").classList = "hidedropmenu";
-            }
-            else if(document.getElementById("iuser").classList.contains('hidedropmenu')){
-                document.getElementById("iuser").classList = "showdropmenu";
-            }
-            else if(document.getElementById("isupport").classList.contains('showdropmenu')){
-                document.getElementById("isupport").classList = "hidedropmenu";
-            }
-            else {
-                document.getElementById("isupport").classList = "showdropmenu";
-            }
+        function activateDropMenu (div){
+            window.alert(div.id);
+            
             
         }
         
