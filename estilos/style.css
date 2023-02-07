@@ -189,6 +189,56 @@ span#menuhamburguer{
     
 
 }
+#botaoajuda{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    
+}
+#botaoajuda > button{
+    background-color: var(--cor1);
+    color: white;
+    order: 1;
+    box-shadow: 1px 1px 3px  rgba(0, 0, 0, 0.399);
+    transition: all 1s ease;
+}
+#botaoajuda > button:active{
+    background-color: white;
+    color: var(--cor1);
+    transition: 0s;
+}
+#botaoajuda button{
+    border: 2px solid var(--cor1);
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-family: var(--font);
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    cursor: pointer;
+
+}
+#botaoajuda > div > ul{
+    list-style: none;
+    text-align: end;
+}
+#botaoajuda li button{
+    background-color: white;
+    color: var(--cor1);
+    box-shadow: 1px 1px 3px  rgba(0, 0, 0, 0.179);
+    transition: all 1s ease;
+}
+#botaoajuda li button:active{
+    background-color: var(--cor1);
+    color: white;
+    transition: 0s;
+}
 #section1{
 
     height: 80vh;
