@@ -1,2 +1,43 @@
 @charset "UTF-8";
 
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    div#menudireito{
+        display: flex;
+        flex: row nowrap;
+        justify-content: space-between;
+        width: 40%;
+    }
+    a.regularscreen{
+        display: inline-block;
+        
+    }
+    a.largescreen{
+        display: none;
+    }
+    #subsection1{
+        width: 700px;
+        
+    }
+    
+
+    
+}
+@media screen and (min-width: 992px) {
+    div#menudireito{
+        display: flex;
+        flex: row nowrap;
+        justify-content: space-between;
+        width: 40%;
+    }
+    #menuhamburguer{
+        display: none;
+    }
+    div#menudireito a{
+        display: block;
+        
+    }
+    #subsection1{
+        width: 700px;
+        
+    }
+}

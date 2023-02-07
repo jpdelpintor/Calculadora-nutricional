@@ -37,6 +37,11 @@ header > a{
 header img{
     transform: scale(0.8);
 }
+
+div#menudireito a{
+    display: none;
+    color: black;
+}
 menu#imenu{
     display: block;
     position: absolute;
@@ -337,7 +342,7 @@ strong{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-   
+    transition: width 1s ease-in-out;
     
 
 }
