@@ -203,7 +203,7 @@ span#menuhamburguer{
     color: white;
     order: 1;
     box-shadow: 1px 1px 3px  rgba(0, 0, 0, 0.399);
-    transition: all 1s ease;
+    transition: all 1s ease-out;
 }
 #botaoajuda > button:active{
     background-color: white;
@@ -235,7 +235,7 @@ span#menuhamburguer{
     background-color: white;
     color: var(--cor1);
     box-shadow: 1px 1px 3px  rgba(0, 0, 0, 0.179);
-    transition: all 1s ease;
+    transition: all 1s ease-out;
 }
 #botaoajuda li button:active{
     background-color: var(--cor1);
@@ -534,7 +534,8 @@ footer span ~ p{
     transform: translateY(-7px);
 }
 div.imagemfooter{
-    padding: 10px 0px;
+    padding: 5px 0px;
+    text-align: star;
 }
 div#rodape{
     display: flex;
@@ -542,7 +543,7 @@ div#rodape{
     width: 246.988px;
     flex-wrap: wrap;
     margin: auto;
-    padding: 40px 0px 20px 0px;
+    padding: 20px 0px 10px 0px;
 }
 div#rodape p{
     padding-top: 10px;
