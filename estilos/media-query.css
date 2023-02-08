@@ -8,12 +8,11 @@
         width: 40%;
     }
     .regularscreen{
-        display: block;
+        display: flex;
         position: relative;
+        align-items: center;
     }
-    .regularscreen > span{
-        height: 100%;
-    }
+    
     
     #subsection1{
         width: 500px;
@@ -60,11 +59,15 @@
         display: none;
     }
     .regularscreen{
-        display: block;
-        height: 100%;
+        display: flex;
+        position: relative;
+        align-items: center;
     }
+   
     .largescreen{
-        display: block;
+        display: flex;
+        position: relative;
+        align-items: center;
         text-decoration: none;
         font-family: var(--font);
         font-weight: 900;
