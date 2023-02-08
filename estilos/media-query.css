@@ -50,7 +50,9 @@
         display: flex;
         flex: row nowrap;
         justify-content: space-between;
-        width: 40%;
+        width: 50%;
+       
+        
     }
     #menuhamburguer{
         display: none;
@@ -61,9 +63,13 @@
     .largescreen{
         display: block;
         text-decoration: none;
-        font: normal 900 16px/16.9px var(--font);
+        font-family: var(--font);
+        font-weight: 900;
+        font-size: calc(1rem + .3vw);
+        line-height: calc(1rem + .5vw);
         letter-spacing: 0px;
         text-transform: uppercase;
+        /*16px/16.9px*/
     }
     #subsection1{
         width: 600px;
