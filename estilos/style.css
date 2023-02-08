@@ -37,11 +37,15 @@ header > a{
 header img{
     transform: scale(0.8);
 }
-
-div#menudireito a{
+.regularscreen{
     display: none;
     color: black;
 }
+.largescreen{
+    display: none;
+    color: black;
+}
+
 menu#imenu{
     display: block;
     position: absolute;
@@ -247,9 +251,10 @@ span#menuhamburguer{
     color: white;
     transition: 0s;
 }
+/*Section1*/
 #section1{
-
-    height: 80vh;
+    padding: 30px 0px;
+    
 }
 .titulo{
     font-family: var(--font);
@@ -333,9 +338,9 @@ strong{
     display: flex;
     color: black;
     background-color: var(--cor2);
-    height: 35%;
+    height: 184px;
     width: 450px;
-    margin: 30px auto 0px auto;
+    margin: 0px auto 0px auto;
     padding: 10px;
     border-radius: 10px;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.179);
@@ -349,6 +354,7 @@ strong{
 .conteudo{
     width: 70%;
     padding-right: 10px;
+    
 
 }
 .conteudo > h2{
@@ -373,6 +379,7 @@ strong{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left bottom;
+    
     
     
 }

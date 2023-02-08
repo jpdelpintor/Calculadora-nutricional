@@ -7,16 +7,39 @@
         justify-content: space-between;
         width: 40%;
     }
-    a.regularscreen{
-        display: inline-block;
-        
+    .regularscreen{
+        display: block;
+        position: relative;
     }
-    a.largescreen{
-        display: none;
-    }
+    
+    
     #subsection1{
-        width: 700px;
+        width: 500px;
+        height: 219px;
         
+    }
+    
+    .regularscreen::after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        opacity: 0;
+        height: 100%;
+        width: 100%;
+        box-shadow: 0px 0px 20px 40px var(--cor1transp);
+        border-radius: 50%;
+        transition: all 0.5s;
+    }
+    .regularscreen:active::after{
+        box-shadow: 0px 0px 0px 0px 0px var(--cor1transp);
+        opacity: 1;
+        transition: 0s;
+        position: absolute;
+        border-radius: 50%;
+        top: 0px;
+        left: 0px;
     }
     
 
@@ -32,12 +55,26 @@
     #menuhamburguer{
         display: none;
     }
-    div#menudireito a{
+    .regularscreen{
         display: block;
-        
+    }
+    .largescreen{
+        display: block;
+        text-decoration: none;
+        font: normal 900 16px/16.9px var(--font);
+        letter-spacing: 0px;
+        text-transform: uppercase;
     }
     #subsection1{
-        width: 700px;
+        width: 600px;
+        height: 230px;
         
+        
+    }
+    .conteudo {
+        width: 60%;
+    }
+    .imagem{
+        width: 40%;
     }
 }
