@@ -65,8 +65,8 @@
         text-decoration: none;
         font-family: var(--font);
         font-weight: 900;
-        font-size: clamp(16px, 1rem + .1vw, 24px);
-        line-height: clamp(16.9px, 1rem + .1vw, 24px);
+        font-size: clamp(16px, 16px + .1vw, 24px);
+        line-height: clamp(16.9px, 16.9px + .1vw, 24px);
         letter-spacing: 0px;
         text-transform: uppercase;
         /*16px/16.9px*/
