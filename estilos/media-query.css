@@ -104,9 +104,14 @@
         line-height: clamp(18px, 18px + 0.5vw, 32px);
         
     }
-
+    .campo{
+        width: max(320px, 400px - 5.2vw);
+    }
     .campo > input{
-        font-size: clamp(16px, 16px + 0.5vw, 24px);
-        line-height: clamp(16.9px, 16.9px + 0.7vw, 28px);
+        font-size: clamp(13px, 13px + 0.5vw, 22px);
+        line-height: clamp(18px, 18px + 0.5vw, 32px);
+    }
+    .campo > label{
+        
     }
 }

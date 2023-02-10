@@ -442,6 +442,7 @@ strong{
     
 }
 .campo > label{
+    /*tornar isso flex*/
     display: block;
     height: 28px;
     width: 24px;
