@@ -111,5 +111,41 @@
         font-size: clamp(13px, 13px + 0.5vw, 22px);
         line-height: clamp(18px, 18px + 0.5vw, 32px);
     }
-    
+    .campo > label{
+        transform: scale(1);
+    }
+
+    #section3{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+    #section3 h3{
+        display: block;
+        font-family: var(--font);
+        font-weight: 900;
+        font-size: clamp(10px, 10px + .5vw, 16px);
+        line-height: clamp(10.3px, 10.3px + .5vw, 16px);
+        text-transform: uppercase;
+        padding: 0px 0px 5px 0px;
+    }
+    div.cabecalho > button{
+        display: none;
+    }
+    div.cabecalho{
+        border: 0px;
+    }
+
+    div.cabecalho > ul{
+        display: block;
+    }
+
+    div.cabecalho li{
+        border: 0px;
+    }
+    div.cabecalho a{
+        font-size: clamp(10px, 10px + .5vw, 16px);
+        line-height: clamp(10.3px, 10.3px + .5vw, 16px);
+        padding: 5px 0px;
+    }
 }
