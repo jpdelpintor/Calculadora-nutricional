@@ -156,6 +156,40 @@
         font-family: var(--font);
         font-size: clamp(10px, 10px + .5vw, 16px);
         line-height: 22px;
+        padding: 5px 0px;
 
     }
+    footer{
+        padding: 20px 100px;
+        
+    }
+    div#cartao{
+        position: relative;
+        display: inline-block;
+        bottom: 30px;
+        margin-right: 100px;
+
+    }
+    div#comprasegura{
+        display: inline-block;
+    }
+    div#rodape{
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between ;
+        align-items: center;
+        margin: 0px;
+        width: 600px;
+    }
+    div#rodape > p{
+        display: inline-block;
+        padding: 0px;
+        font-family: var(--font);
+        font-size: clamp(10px, 10px + .5vw, 16px);
+        line-height: clamp(10.3px, 10.3px + .5vw, 16px);
+
+        
+    }
+
+   
 }
