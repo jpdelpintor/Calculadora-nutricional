@@ -179,7 +179,7 @@
         justify-content: space-between ;
         align-items: center;
         margin: 0px;
-        width: 600px;
+        width: 550px;
     }
     div#rodape > p{
         display: inline-block;
@@ -187,6 +187,7 @@
         font-family: var(--font);
         font-size: clamp(10px, 10px + .5vw, 16px);
         line-height: clamp(10.3px, 10.3px + .5vw, 16px);
+        width: auto;
 
         
     }
