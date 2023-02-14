@@ -118,7 +118,7 @@
     #section3{
         display: flex;
         justify-content: space-between;
-        padding: 20px;
+        padding: 50px 100px 0px 100px;
     }
     #section3 h3{
         display: block;
@@ -127,7 +127,7 @@
         font-size: clamp(10px, 10px + .5vw, 16px);
         line-height: clamp(10.3px, 10.3px + .5vw, 16px);
         text-transform: uppercase;
-        padding: 0px 0px 5px 0px;
+        padding: 0px 0px 15px 0px;
     }
     div.cabecalho > button{
         display: none;
@@ -147,5 +147,15 @@
         font-size: clamp(10px, 10px + .5vw, 16px);
         line-height: clamp(10.3px, 10.3px + .5vw, 16px);
         padding: 5px 0px;
+    }
+    h3#h3cabecalho{
+        text-align: center;
+    }
+    div.cabecalho > p{
+        text-align: center;
+        font-family: var(--font);
+        font-size: clamp(10px, 10px + .5vw, 16px);
+        line-height: 22px;
+
     }
 }
