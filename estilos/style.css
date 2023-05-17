@@ -561,6 +561,10 @@ div#rodape p{
     padding-top: 10px;
     width: 246.988px;
 }
+
+.fullscreen{
+    display: none;
+}
  
 
 

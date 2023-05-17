@@ -43,9 +43,7 @@
         top: 0px;
         left: 0px;
     }
-    .fullscreen{
-        display: none;
-    }
+    
     
 
     
@@ -193,6 +191,10 @@
         width: auto;
 
         
+    }
+
+    .fullscreen{
+        display: block;
     }
 
    
