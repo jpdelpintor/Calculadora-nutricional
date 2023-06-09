@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.nutrientes{
+    height: 100px;
+    width: 80vw;
+    margin: auto;
+    border: 1px solid black;
+}
+
+.ingredientes{
+    height: 100px;
+    width: 80vw;
+    margin: auto;
+    border: 1px solid black;   
+}
+.resultado{
+    height: 100px;
+    width: 80vw;
+    margin: auto;
+    border: 1px solid black;
+}
