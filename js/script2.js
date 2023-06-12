@@ -4,6 +4,7 @@ const teorProteina = document.querySelector('#proteina')
 const inputAlimento = document.querySelector('div.ingredientes > input')
 const botaoInserir = document.querySelector('.nutrientes button')
 const botaoAdicionar = document.querySelector('.ingredientes button')
+const areaResultado = document.querySelector('.resultado')
 let ingredientes = []
 
 class calculadora{
@@ -14,21 +15,55 @@ class calculadora{
         this.listaIngredientes = ingredientes
     }
 
+    addDemandas(){
+        const gordura = +teorGordura.value
+        const carboidrato = +teorCarboidrato.value
+        const proteina = +teorProteina.value
+
+        this.teorCarboidrato = carboidrato
+        this.teorGordura = gordura
+        this.teorProteina = proteina
+
+    }
+
+    
+    addIngredientes(){
+            if(ingredientes.length === 0){
+                ingredientes[0] = inputAlimento.value
+            } else{
+                ingredientes[ingredientes.length] = inputAlimento.value
+            }
+
+            this.listaIngredientes = ingredientes
+    }
+
 
 }
 
+const calc = new calculadora
+
 botaoInserir.addEventListener("click", ()=>{
-    const gordura = +teorGordura.value
-    const carboidrato = +teorCarboidrato.value
-    const proteina = +teorProteina.value
-    const calc = new calculadora(gordura, carboidrato, proteina)
+    
+    calc.addDemandas()
+
+    
     console.log(`O valor é ${calc.teorCarboidrato} e é do tipo ${typeof(calc.teorCarboidrato)}`)
 })
 
 botaoAdicionar.addEventListener("click", ()=>{
     
-    ingredientes = inputAlimento.value
-    console.log(ingredientes)
+    calc.addIngredientes()
+
+    const divResultadoMaior = document.createElement('div')
+    divResultadoMaior.classList.add('quadroResultados')
+    
+
+
+
+    
+    console.log(`${calc.listaIngredientes}`)
+    
+    
 })
 
 
