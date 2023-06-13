@@ -20,8 +20,23 @@
     border: 1px solid black;   
 }
 .resultado{
+    display: flex;
+    
+    justify-content: space-evenly;
     height: 100px;
     width: 80vw;
     margin: auto;
     border: 1px solid black;
+}
+
+.resultadoIngredientes{
+    display: flex;
+    flex-basis: 200px;
+    flex-direction: column;
+}
+
+.resultadoQuantidades{
+    display: flex;
+    flex-basis: 200px;
+    flex-direction: column;
 }

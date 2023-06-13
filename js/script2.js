@@ -3,9 +3,19 @@ const teorCarboidrato = document.querySelector('#carboidrato')
 const teorProteina = document.querySelector('#proteina')
 const inputAlimento = document.querySelector('div.ingredientes > input')
 const botaoInserir = document.querySelector('.nutrientes button')
-const botaoAdicionar = document.querySelector('.ingredientes button')
-const areaResultado = document.querySelector('.resultado')
+const botaoAdicionar = document.querySelector('#botaoAdicionar')
+const botaoCalcular = document.querySelector('#botaoCalcular')
+const resultadoIngredientes = document.querySelector('.resultadoIngredientes')
+const resultadoQuantidades = document.querySelector('.resultadoQuantidades')
+let bancoDeDados = []
 let ingredientes = []
+
+class alimentos{
+    constructor (){
+        
+    }
+}
+
 
 class calculadora{
     constructor(gordura, carboidrato, proteina, ingredientes){
@@ -54,16 +64,13 @@ botaoAdicionar.addEventListener("click", ()=>{
     
     calc.addIngredientes()
 
-    const divResultadoMaior = document.createElement('div')
-    divResultadoMaior.classList.add('quadroResultados')
+    const divResultado = document.createElement('div')
     
+    resultadoIngredientes.appendChild(divResultado)
 
-
-
-    
-    console.log(`${calc.listaIngredientes}`)
-    
-    
+    divResultado.innerText = calc.listaIngredientes[calc.listaIngredientes.length - 1]
+    divResultado.style.textAlign = 'center'
+     
 })
 
 
