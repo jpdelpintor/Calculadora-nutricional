@@ -24,14 +24,33 @@ const analytics = getAnalytics(app)
 
 getDocs(collection(db, 'ingredientes'))
  .then(querySnapshot => {
-    console.log(querySnapshot)
+    querySnapshot.docs.forEach( doc => {
+        console.log(doc.data())
+    })
  })
  .catch(console.log)
+
+ getDocs(collection(db, 'ingredientes'))
+    .then(querySnapshot => {
+        
+        const ingredientesInicializar = querySnapshot.docs.reduce((acc, doc) => {
+            const {nome} = doc.data()
+            acc += `<option value="${nome}">${nome}</option>`
+
+            return acc
+        }, '')
+
+        inputAlimento.innerHTML = ingredientesInicializar
+    })
+    .catch(console.log)
+
+    
+
 
 const teorGordura = document.querySelector('#gordura')
 const teorCarboidrato = document.querySelector('#carboidrato')
 const teorProteina = document.querySelector('#proteina')
-const inputAlimento = document.querySelector('div.ingredientes > input')
+const inputAlimento = document.querySelector('div.ingredientes > select')
 const botaoInserir = document.querySelector('.nutrientes button')
 const botaoAdicionar = document.querySelector('#botaoAdicionar')
 const botaoCalcular = document.querySelector('#botaoCalcular')
@@ -39,12 +58,6 @@ const resultadoIngredientes = document.querySelector('.resultadoIngredientes')
 const resultadoQuantidades = document.querySelector('.resultadoQuantidades')
 let bancoDeDados = []
 let ingredientes = []
-
-class alimentos{
-    constructor (){
-        
-    }
-}
 
 
 class calculadora{
