@@ -54,6 +54,7 @@ const inputAlimento = document.querySelector('div.ingredientes > select')
 const botaoInserir = document.querySelector('.nutrientes button')
 const botaoAdicionar = document.querySelector('#botaoAdicionar')
 const botaoCalcular = document.querySelector('#botaoCalcular')
+const resultadoNutrientes = document.querySelector('.resultadoNutrientes')
 const resultadoIngredientes = document.querySelector('.resultadoIngredientes')
 const resultadoQuantidades = document.querySelector('.resultadoQuantidades')
 let bancoDeDados = []
@@ -61,11 +62,12 @@ let ingredientes = []
 
 
 class calculadora{
-    constructor(gordura, carboidrato, proteina, ingredientes){
+    constructor(gordura, carboidrato, proteina, ingredientes, ingredientesCompletos){
         this.teorGordura = gordura
         this.teorCarboidrato = carboidrato
         this.teorProteina = proteina
         this.listaIngredientes = ingredientes
+        this.listaIngredientesCompletos = ingredientesCompletos
     }
 
     addDemandas(){
@@ -90,6 +92,20 @@ class calculadora{
             this.listaIngredientes = ingredientes
     }
 
+    buildIngrCompletos(){
+        getDocs(collection(db, 'ingredientes'))
+            .then(querySnapshot => {
+                querySnapshot.docs.forEach(doc =>{
+                    this.listaIngredientes.forEach(ingrediente =>{
+                        if(doc.nome === ingrediente){
+                            this.listaIngredientesCompletos = doc
+                        }
+                    })
+                })
+            })
+
+    }
+
 
 }
 
@@ -98,9 +114,21 @@ const calc = new calculadora
 botaoInserir.addEventListener('click', ()=>{
     
     calc.addDemandas()
+    const listaNutrientes = [{valor: calc.teorCarboidrato, nome: 'carboidrato'}, {valor: calc.teorGordura, nome: 'gordura'}, {valor: calc.teorProteina, nome: 'proteína'}]
+    const listaNomeNutrientes = ['carboidrato', 'gordura', 'proteína']
 
+
+    listaNutrientes.forEach(nutriente => {
+        
+        const divResultado = document.createElement('div')
+        resultadoNutrientes.appendChild(divResultado)
+        divResultado.innerText = `${nutriente.valor}g de ${nutriente.nome}`
+        divResultado.style.textAlign = 'center'
+       
+    })
     
-    console.log(`O valor é ${calc.teorCarboidrato} e é do tipo ${typeof(calc.teorCarboidrato)}`)
+
+
 })
 
 botaoAdicionar.addEventListener('click', ()=>{
@@ -115,6 +143,8 @@ botaoAdicionar.addEventListener('click', ()=>{
     divResultado.style.textAlign = 'center'
      
 })
+
+botaoCalcular
 
 
 
