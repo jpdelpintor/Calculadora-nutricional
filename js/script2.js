@@ -22,14 +22,6 @@ const app = initializeApp(firebaseConfig)
 const db = getFirestore(app)
 const analytics = getAnalytics(app)
 
-getDocs(collection(db, 'ingredientes'))
- .then(querySnapshot => {
-    querySnapshot.docs.forEach( doc => {
-        console.log(doc.data())
-    })
- })
- .catch(console.log)
-
  getDocs(collection(db, 'ingredientes'))
     .then(querySnapshot => {
         
@@ -93,16 +85,31 @@ class calculadora{
     }
 
     buildIngrCompletos(){
+        const listaIngredientesCompletos = []
+        let i=0
         getDocs(collection(db, 'ingredientes'))
             .then(querySnapshot => {
                 querySnapshot.docs.forEach(doc =>{
+                    const docObjeto = doc.data()
                     this.listaIngredientes.forEach(ingrediente =>{
-                        if(doc.nome === ingrediente){
-                            this.listaIngredientesCompletos = doc
+
+                        if(docObjeto.nome === ingrediente){
+                            
+                            listaIngredientesCompletos[i] = docObjeto
+                            
+                            i+=1
+                            
                         }
+                        
+                       
                     })
                 })
+                this.listaIngredientesCompletos = listaIngredientesCompletos
+                
             })
+            .catch(console.log)
+        
+        
 
     }
 
@@ -144,7 +151,12 @@ botaoAdicionar.addEventListener('click', ()=>{
      
 })
 
-botaoCalcular
+botaoCalcular.addEventListener('click', ()=>{
+    calc.buildIngrCompletos()
+    console.log(calc.listaIngredientes)
+    
+    
+})
 
 
 
