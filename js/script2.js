@@ -105,6 +105,12 @@ class calculadora{
                     })
                 })
                 this.listaIngredientesCompletos = listaIngredientesCompletos
+                return new Promise((resolve, reject)=>{
+
+                    resolve()
+                    
+                }) 
+                
                 
             })
             .catch(console.log)
@@ -153,10 +159,34 @@ botaoAdicionar.addEventListener('click', ()=>{
 
 botaoCalcular.addEventListener('click', ()=>{
     calc.buildIngrCompletos()
-    console.log(calc.listaIngredientes)
+     .then(console.log(calc.listaIngredientesCompletos))
+     .catch(console.log())
+    
     
     
 })
+
+
+
+function simplex (ingredientes){
+    let listaCustos = []
+    let A = []
+    let listaM = [-1000, -1000, -1000]
+    //Montando array de custos
+    let i=0
+    ingredientes.forEach(ingrediente =>{
+        
+        listaCustos[i] = ingrediente.preco
+        i+=1
+    })
+    listaCustos.concat(listaM)
+
+    console.log(listaCustos)
+
+
+}
+
+
 
 
 
