@@ -105,15 +105,13 @@ class calculadora{
                     })
                 })
                 this.listaIngredientesCompletos = listaIngredientesCompletos
-                return new Promise((resolve, reject)=>{
-
-                    resolve()
-                    
-                }) 
+                
                 
                 
             })
             .catch(console.log)
+
+            
         
         
 
@@ -159,8 +157,7 @@ botaoAdicionar.addEventListener('click', ()=>{
 
 botaoCalcular.addEventListener('click', ()=>{
     calc.buildIngrCompletos()
-     .then(console.log(calc.listaIngredientesCompletos))
-     .catch(console.log())
+     
     
     
     
