@@ -33,6 +33,7 @@ const analytics = getAnalytics(app)
         }, '')
 
         inputAlimento.innerHTML = ingredientesInicializar
+        listaQuerySnapshot = querySnapshot.docs
     })
     .catch(console.log)
 
@@ -51,6 +52,7 @@ const resultadoIngredientes = document.querySelector('.resultadoIngredientes')
 const resultadoQuantidades = document.querySelector('.resultadoQuantidades')
 let bancoDeDados = []
 let ingredientes = []
+let listaQuerySnapshot
 
 
 class calculadora{
@@ -87,34 +89,25 @@ class calculadora{
     buildIngrCompletos(){
         const listaIngredientesCompletos = []
         let i=0
-        getDocs(collection(db, 'ingredientes'))
-            .then(querySnapshot => {
-                querySnapshot.docs.forEach(doc =>{
-                    const docObjeto = doc.data()
-                    this.listaIngredientes.forEach(ingrediente =>{
+        
+            
+        listaQuerySnapshot.forEach(doc =>{
+            const docObjeto = doc.data()
+            this.listaIngredientes.forEach(ingrediente =>{
 
-                        if(docObjeto.nome === ingrediente){
-                            
-                            listaIngredientesCompletos[i] = docObjeto
-                            
-                            i+=1
-                            
-                        }
-                        
-                       
-                    })
-                })
-                this.listaIngredientesCompletos = listaIngredientesCompletos
-                
+                if(docObjeto.nome === ingrediente){
+                    
+                    listaIngredientesCompletos[i] = docObjeto
+                    
+                    i+=1
+                    
+                }
                 
                 
             })
-            .catch(console.log)
-
-            
-        
-        
-
+        })
+        this.listaIngredientesCompletos = listaIngredientesCompletos
+    
     }
 
 
@@ -156,7 +149,12 @@ botaoAdicionar.addEventListener('click', ()=>{
 })
 
 botaoCalcular.addEventListener('click', ()=>{
+    
     calc.buildIngrCompletos()
+    console.log(calc.listaIngredientesCompletos)
+    listaQuerySnapshot.forEach(doc => {
+        console.log(doc.data())
+    })
      
     
     
