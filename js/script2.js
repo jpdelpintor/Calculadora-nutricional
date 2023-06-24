@@ -151,10 +151,7 @@ botaoAdicionar.addEventListener('click', ()=>{
 botaoCalcular.addEventListener('click', ()=>{
     
     calc.buildIngrCompletos()
-    console.log(calc.listaIngredientesCompletos)
-    listaQuerySnapshot.forEach(doc => {
-        console.log(doc.data())
-    })
+    simplex(calc.listaIngredientesCompletos)
      
     
     
@@ -175,7 +172,7 @@ function simplex (ingredientes){
         i+=1
     })
     listaCustos.concat(listaM)
-
+    console.log(listaM)
     console.log(listaCustos)
 
 
