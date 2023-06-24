@@ -171,9 +171,11 @@ function simplex (ingredientes){
         listaCustos[i] = ingrediente.preco
         i+=1
     })
-    listaCustos.concat(listaM)
-    console.log(listaM)
-    console.log(listaCustos)
+    let listaCustosM = listaCustos.concat(listaM)
+    console.log(listaCustosM)
+    
+    //Montando matriz A
+    
 
 
 }
