@@ -57,6 +57,7 @@ let listaQuerySnapshot
 
 class calculadora{
     constructor(gordura, carboidrato, proteina, ingredientes, ingredientesCompletos){
+        
         this.teorGordura = gordura
         this.teorCarboidrato = carboidrato
         this.teorProteina = proteina
@@ -65,6 +66,7 @@ class calculadora{
     }
 
     addDemandas(){
+        
         const gordura = +teorGordura.value
         const carboidrato = +teorCarboidrato.value
         const proteina = +teorProteina.value
@@ -149,9 +151,10 @@ botaoAdicionar.addEventListener('click', ()=>{
 })
 
 botaoCalcular.addEventListener('click', ()=>{
-    
+    const listaDemandas = [calc.teorGordura, calc.teorCarboidrato, calc.listaTeorProteina]
+
     calc.buildIngrCompletos()
-    simplex(calc.listaIngredientesCompletos)
+    simplex(calc.listaIngredientesCompletos, listaDemandas)
      
     
     
@@ -160,10 +163,14 @@ botaoCalcular.addEventListener('click', ()=>{
 
 
 
-function simplex (ingredientes){
+function simplex (ingredientes, demandas){
     let listaCustos = []
-    let A = []
+    let matrizA = []
     let listaM = [-1000, -1000, -1000]
+    let listaTeorGordura = []
+    let listaTeorCarboidrato = []
+    let listaTeorProteina = []
+
     //Montando array de custos
     let i=0
     ingredientes.forEach(ingrediente =>{
@@ -171,12 +178,22 @@ function simplex (ingredientes){
         listaCustos[i] = ingrediente.preco
         i+=1
     })
-    let listaCustosM = listaCustos.concat(listaM)
+    let listaCustosM = listaCustos.concat(listaM, 0)
     console.log(listaCustosM)
     
     //Montando matriz A
-    
+    //Lista dos teores dos nutrientes
+    ingredientes.forEach(ingrediente =>{
+        
+        listaTeorGordura.push(ingrediente.teorGordura)
+        listaTeorCarboidrato.push(ingrediente.teorCarboidrato)
+        listaTeorProteina.push(ingrediente.teorProteina)
 
+    })
+    for(let i=0; i<=)
+
+    matrizA.push(listaTeorGordura, listaTeorCarboidrato,listaTeorProteina)
+       
 
 }
 
