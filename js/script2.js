@@ -151,7 +151,7 @@ botaoAdicionar.addEventListener('click', ()=>{
 })
 
 botaoCalcular.addEventListener('click', ()=>{
-    const listaDemandas = [calc.teorGordura, calc.teorCarboidrato, calc.listaTeorProteina]
+    const listaDemandas = [calc.teorGordura, calc.teorCarboidrato, calc.teorProteina]
 
     calc.buildIngrCompletos()
     simplex(calc.listaIngredientesCompletos, listaDemandas)
@@ -164,35 +164,51 @@ botaoCalcular.addEventListener('click', ()=>{
 
 
 function simplex (ingredientes, demandas){
-    let listaCustos = []
-    let matrizA = []
-    let listaM = [-1000, -1000, -1000]
-    let listaTeorGordura = []
-    let listaTeorCarboidrato = []
-    let listaTeorProteina = []
-
+    
+    
+   
     //Montando array de custos
-    let i=0
-    ingredientes.forEach(ingrediente =>{
-        
-        listaCustos[i] = ingrediente.preco
-        i+=1
-    })
-    let listaCustosM = listaCustos.concat(listaM, 0)
-    console.log(listaCustosM)
+    let listaCustos = ingredientes.map( ingrediente => ingrediente.preco)
+    for(let i=0 ; i < demandas.length ; i++){
+        listaCustos.push(-1000)
+    }
+    listaCustos.push(0)
+    console.log(listaCustos)
+    
+    
     
     //Montando matriz A
     //Lista dos teores dos nutrientes
-    ingredientes.forEach(ingrediente =>{
+    
+    let listaTeorGordura = ingredientes.map( ingrediente => ingrediente.teorGordura)
+    let listaTeorCarboidrato = ingredientes.map( ingrediente => ingrediente.teorCarboidrato)
+    let listaTeorProteina = ingredientes.map( ingrediente => ingrediente.teorProteina)
+    
+   
+    let matrizA = []
+    let matrizId = [] 
+    for(let i=0 ; i < demandas.length ; i++){
         
-        listaTeorGordura.push(ingrediente.teorGordura)
-        listaTeorCarboidrato.push(ingrediente.teorCarboidrato)
-        listaTeorProteina.push(ingrediente.teorProteina)
+        matrizId[i] = []
+        for(let j=0 ; j < demandas.length ; j++){
+            if( i === j){
+                matrizId[i][j] = 1
+            } else{
+                matrizId[i][j] = 0
+            }
+        }
 
-    })
-    for(let i=0; i<=)
+        matrizA[i] = listaTeorGordura.concat(matrizId[i], demandas[i])
+        
+    }
 
-    matrizA.push(listaTeorGordura, listaTeorCarboidrato,listaTeorProteina)
+
+    console.log(listaTeorCarboidrato)
+    console.log(matrizA)
+    
+    // let matrizATeste = listaTeorGordura.concat(matrizId[0], demandas[0])
+    // console.log(matrizATeste)
+    // console.log(listaTeorGordura, matrizId[0], demandas[0])
        
 
 }
