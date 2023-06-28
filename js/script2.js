@@ -184,6 +184,7 @@ function simplex (ingredientes, demandas){
     let listaTeorCarboidrato = ingredientes.map( ingrediente => ingrediente.teorCarboidrato)
     let listaTeorProteina = ingredientes.map( ingrediente => ingrediente.teorProteina)
     
+    let listas = [listaTeorGordura, listaTeorCarboidrato, listaTeorProteina]
    
     let matrizA = []
     let matrizId = [] 
@@ -198,7 +199,7 @@ function simplex (ingredientes, demandas){
             }
         }
 
-        matrizA[i] = listaTeorGordura.concat(matrizId[i], demandas[i])
+        matrizA[i] = listas[i].concat(matrizId[i], demandas[i])
         
     }
 
@@ -206,9 +207,7 @@ function simplex (ingredientes, demandas){
     console.log(listaTeorCarboidrato)
     console.log(matrizA)
     
-    // let matrizATeste = listaTeorGordura.concat(matrizId[0], demandas[0])
-    // console.log(matrizATeste)
-    // console.log(listaTeorGordura, matrizId[0], demandas[0])
+ 
        
 
 }
